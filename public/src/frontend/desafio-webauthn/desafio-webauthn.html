@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <title>Verificar passkey</title>
+  <link rel="stylesheet" href="../../../assets/estilos-base.css">
+  <link rel="stylesheet" href="desafio-webauthn.css">
+  <script type="module" src="desafio-webauthn.js"></script>
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+  <main id="contenido" class="pagina-autenticacion">
+    <div class="contenedor-autenticacion">
+      <p class="identidad-servicio">Verificación adicional</p>
+      <section class="tarjeta" aria-labelledby="titulo">
+        <h1 id="titulo">Confirma con tu passkey</h1>
+        <p class="introduccion">Tu navegador o dispositivo solicitará el método de desbloqueo asociado.</p>
+        <div id="mensaje-desafio" class="mensaje" role="alert" aria-live="assertive" hidden></div>
+        <button id="boton-passkey" class="boton boton-principal" type="button">Usar passkey</button>
+
+        <details id="alternativa-respaldo" class="alternativa-respaldo">
+          <summary>Usar un código de respaldo</summary>
+          <form id="formulario-respaldo" novalidate>
+            <div class="grupo-campo">
+              <label for="codigo_respaldo">Código de un solo uso</label>
+              <input id="codigo_respaldo" name="codigo_respaldo" type="text" autocomplete="one-time-code" spellcheck="false" aria-describedby="error-codigo_respaldo" required>
+              <p id="error-codigo_respaldo" class="error-campo"></p>
+            </div>
+            <button class="boton boton-secundario" type="submit">Verificar código</button>
+          </form>
+        </details>
+        <p class="pie-formulario"><a href="../inicio-sesion/inicio-sesion.html">Cancelar y volver al inicio</a></p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

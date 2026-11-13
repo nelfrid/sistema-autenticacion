@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="../../../assets/estilos-base.css">
+  <link rel="stylesheet" href="inicio-sesion.css">
+  <script type="module" src="inicio-sesion.js"></script>
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+  <main id="contenido" class="pagina-autenticacion">
+    <div class="contenedor-autenticacion">
+      <p class="identidad-servicio">Servicio de autenticación</p>
+      <section class="tarjeta" aria-labelledby="titulo">
+        <h1 id="titulo">Iniciar sesión</h1>
+        <p class="introduccion">Usa tu correo y contraseña. Después se solicitará tu passkey.</p>
+        <div id="mensaje-acceso" class="mensaje" role="alert" aria-live="assertive" hidden></div>
+        <form id="formulario-acceso" novalidate>
+          <div class="grupo-campo">
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" name="correo" type="email" inputmode="email" autocomplete="username" maxlength="254" aria-describedby="error-correo" required>
+            <p id="error-correo" class="error-campo"></p>
+          </div>
+          <div class="grupo-campo">
+            <label for="contrasena">Contraseña</label>
+            <div class="campo-con-accion">
+              <input id="contrasena" name="contrasena" type="password" autocomplete="current-password" aria-describedby="error-contrasena" required>
+              <button type="button" data-alternar-contrasena="contrasena" aria-pressed="false">Mostrar</button>
+            </div>
+            <p id="error-contrasena" class="error-campo"></p>
+          </div>
+          <button class="boton boton-principal" type="submit">Continuar</button>
+        </form>
+        <p class="pie-formulario">¿No tienes una cuenta? <a href="../registro/registro.html">Créala</a>.</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

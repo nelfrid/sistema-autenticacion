@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <title>Resolver sesión simultánea</title>
+  <link rel="stylesheet" href="../../../assets/estilos-base.css">
+  <link rel="stylesheet" href="conflicto-sesion.css">
+  <script type="module" src="conflicto-sesion.js"></script>
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+  <main id="contenido" class="pagina-autenticacion">
+    <div class="contenedor-autenticacion">
+      <p class="identidad-servicio">Protección de sesión</p>
+      <section class="tarjeta" aria-labelledby="titulo">
+        <h1 id="titulo">Ya existe una sesión</h1>
+        <p class="introduccion">Por seguridad, ninguna de las dos sesiones tendrá acceso hasta resolver el conflicto.</p>
+        <div id="mensaje-conflicto" class="mensaje" role="alert" aria-live="assertive" hidden></div>
+        <div id="detalle-conflicto" hidden>
+          <dl class="lista-datos">
+            <dt>Inicio aproximado</dt>
+            <dd id="inicio-anterior">No disponible</dd>
+            <dt>Dispositivo</dt>
+            <dd id="dispositivo-anterior">Información limitada</dd>
+          </dl>
+          <p>Después de confirmar tu passkey, conservaremos esta sesión nueva y revocaremos la anterior.</p>
+          <a class="boton boton-principal" href="../desafio-webauthn/desafio-webauthn.html?conflicto=1">Verificar y conservar esta sesión</a>
+        </div>
+        <p class="pie-formulario"><a href="../inicio-sesion/inicio-sesion.html">Cancelar este acceso</a></p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

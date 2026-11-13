@@ -1,0 +1,32 @@
+.contenedor-registro {
+  width: min(100%, 38rem);
+}
+
+.grupo-campos,
+.aceptaciones {
+  display: grid;
+  gap: 1rem;
+}
+
+.grupo-campo {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.grupo-campo label {
+  font-weight: 700;
+}
+
+.aceptaciones {
+  margin: 1.35rem 0;
+}
+
+.boton-principal {
+  width: 100%;
+}
+
+.pie-formulario {
+  margin: 1.3rem 0 0;
+  color: var(--color-secundario);
+  text-align: center;
+}

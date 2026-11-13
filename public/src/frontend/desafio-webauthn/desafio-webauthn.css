@@ -1,0 +1,30 @@
+.boton-principal {
+  width: 100%;
+}
+
+.alternativa-respaldo {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-borde);
+}
+
+.alternativa-respaldo summary {
+  color: var(--color-accion);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.grupo-campo {
+  display: grid;
+  gap: 0.35rem;
+  margin: 1rem 0;
+}
+
+.grupo-campo label {
+  font-weight: 700;
+}
+
+.pie-formulario {
+  margin: 1.35rem 0 0;
+  text-align: center;
+}

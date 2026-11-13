@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <title>Sesión segura</title>
+  <link rel="stylesheet" href="../../../assets/estilos-base.css">
+  <link rel="stylesheet" href="sesion.css">
+  <script type="module" src="sesion.js"></script>
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+  <main id="contenido" class="pagina-autenticacion">
+    <div class="contenedor-autenticacion">
+      <p class="identidad-servicio">Área autenticada</p>
+      <section class="tarjeta" aria-labelledby="titulo">
+        <h1 id="titulo">Sesión activa</h1>
+        <p class="introduccion">Esta página confirma únicamente el estado de autenticación.</p>
+        <div id="mensaje-sesion" class="mensaje" role="status" aria-live="polite">Comprobando la sesión…</div>
+        <div id="detalle-sesion" hidden>
+          <dl class="lista-datos">
+            <dt>Cuenta</dt>
+            <dd id="correo-cuenta"></dd>
+            <dt>Vencimiento absoluto</dt>
+            <dd id="vencimiento-absoluto"></dd>
+            <dt>Inactividad máxima</dt>
+            <dd>30 minutos</dd>
+          </dl>
+          <p class="nota-sesion">La sesión no puede superar 8 horas. La renovación del acceso no amplía ese límite.</p>
+          <button id="boton-cerrar" class="boton boton-secundario" type="button">Cerrar sesión</button>
+        </div>
+        <a id="enlace-reingreso" class="boton" href="../inicio-sesion/inicio-sesion.html" hidden>Volver a iniciar sesión</a>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

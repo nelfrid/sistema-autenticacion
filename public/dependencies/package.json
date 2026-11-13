@@ -1,0 +1,9 @@
+{
+  "name": "pruebas-frontend-autenticacion",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pruebas:frontend": "node --test ../src/frontend/pruebas-frontend.js ../src/frontend/pruebas-comportamiento-frontend.js ../src/frontend/pruebas-csrf-frontend.js",
+    "lint:frontend": "node verificar-sintaxis.mjs"
+  }
+}

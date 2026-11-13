@@ -1,0 +1,31 @@
+.contenedor-codigos {
+  width: min(100%, 38rem);
+}
+
+.lista-codigos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem 1.5rem;
+  margin: 1.25rem 0;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 1px dashed #8796a5;
+  border-radius: var(--radio);
+  background: #f7f9fb;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-weight: 700;
+}
+
+#formulario-confirmacion {
+  display: grid;
+  gap: 1rem;
+}
+
+.boton-principal {
+  width: 100%;
+}
+
+@media (max-width: 31rem) {
+  .lista-codigos {
+    grid-template-columns: 1fr;
+  }
+}

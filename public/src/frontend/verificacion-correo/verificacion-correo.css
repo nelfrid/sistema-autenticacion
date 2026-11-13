@@ -1,0 +1,20 @@
+.mensaje-aviso {
+  color: var(--color-aviso);
+  border-color: #e2c474;
+  background: var(--color-aviso-fondo);
+}
+
+.grupo-campo {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.grupo-campo label {
+  font-weight: 700;
+}
+
+.pie-formulario {
+  margin: 1.4rem 0 0;
+  text-align: center;
+}

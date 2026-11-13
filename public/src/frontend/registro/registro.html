@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <title>Crear una cuenta</title>
+  <link rel="stylesheet" href="../../../assets/estilos-base.css">
+  <link rel="stylesheet" href="registro.css">
+  <script type="module" src="registro.js"></script>
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+  <main id="contenido" class="pagina-autenticacion">
+    <div class="contenedor-autenticacion contenedor-registro">
+      <p class="identidad-servicio">Servicio de autenticación</p>
+      <section class="tarjeta" aria-labelledby="titulo-registro">
+        <h1 id="titulo-registro">Crear una cuenta</h1>
+        <p class="introduccion">Todos los campos son obligatorios. Verificaremos tu correo antes del primer acceso.</p>
+        <div id="mensaje-registro" class="mensaje" role="status" aria-live="polite" hidden></div>
+
+        <form id="formulario-registro" novalidate>
+          <div class="grupo-campos">
+            <div class="grupo-campo">
+              <label for="nombre_completo">Nombre completo</label>
+              <input id="nombre_completo" name="nombre_completo" type="text" autocomplete="name" maxlength="150" aria-describedby="error-nombre_completo" required>
+              <p id="error-nombre_completo" class="error-campo"></p>
+            </div>
+
+            <div class="grupo-campo">
+              <label for="correo">Correo electrónico</label>
+              <input id="correo" name="correo" type="email" inputmode="email" autocomplete="email" maxlength="254" aria-describedby="error-correo" required>
+              <p id="error-correo" class="error-campo"></p>
+            </div>
+
+            <div class="grupo-campo">
+              <label for="contrasena">Contraseña</label>
+              <div class="campo-con-accion">
+                <input id="contrasena" name="contrasena" type="password" autocomplete="new-password" aria-describedby="ayuda-contrasena error-contrasena" required>
+                <button type="button" data-alternar-contrasena="contrasena" aria-pressed="false">Mostrar</button>
+              </div>
+              <p id="ayuda-contrasena" class="ayuda">Usa entre 15 y 128 caracteres. Se admiten espacios y puedes pegar desde un gestor.</p>
+              <p id="error-contrasena" class="error-campo"></p>
+            </div>
+
+            <div class="grupo-campo">
+              <label for="confirmacion_contrasena">Confirmar contraseña</label>
+              <div class="campo-con-accion">
+                <input id="confirmacion_contrasena" name="confirmacion_contrasena" type="password" autocomplete="new-password" aria-describedby="error-confirmacion_contrasena" required>
+                <button type="button" data-alternar-contrasena="confirmacion_contrasena" aria-pressed="false">Mostrar</button>
+              </div>
+              <p id="error-confirmacion_contrasena" class="error-campo"></p>
+            </div>
+          </div>
+
+          <div class="aceptaciones">
+            <label class="casilla" for="acepta_terminos">
+              <input id="acepta_terminos" name="acepta_terminos" type="checkbox" aria-describedby="error-acepta_terminos" required>
+              <span>Acepto los <a href="../terminos/terminos.html" target="_blank" rel="noopener">términos demo, versión 1.0</a>.</span>
+            </label>
+            <p id="error-acepta_terminos" class="error-campo"></p>
+
+            <label class="casilla" for="acepta_privacidad">
+              <input id="acepta_privacidad" name="acepta_privacidad" type="checkbox" aria-describedby="error-acepta_privacidad" required>
+              <span>He leído y acepto el <a href="../privacidad/privacidad.html" target="_blank" rel="noopener">aviso de privacidad demo, versión 1.0</a>.</span>
+            </label>
+            <p id="error-acepta_privacidad" class="error-campo"></p>
+          </div>
+
+          <button class="boton boton-principal" type="submit">Crear cuenta</button>
+        </form>
+
+        <p class="pie-formulario">¿Ya tienes una cuenta? <a href="../inicio-sesion/inicio-sesion.html">Inicia sesión</a>.</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

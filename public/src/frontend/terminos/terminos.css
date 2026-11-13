@@ -1,0 +1,5 @@
+.navegacion-documento {
+  margin: 2rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-borde);
+}

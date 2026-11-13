@@ -1,0 +1,19 @@
+.grupo-campo {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.grupo-campo label {
+  font-weight: 700;
+}
+
+.boton-principal {
+  width: 100%;
+}
+
+.pie-formulario {
+  margin: 1.35rem 0 0;
+  color: var(--color-secundario);
+  text-align: center;
+}

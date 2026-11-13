@@ -1,0 +1,10 @@
+.nota-sesion {
+  padding: 0.85rem 1rem;
+  border-left: 4px solid var(--color-accion);
+  background: #f2f7fa;
+}
+
+#boton-cerrar,
+#enlace-reingreso {
+  width: 100%;
+}

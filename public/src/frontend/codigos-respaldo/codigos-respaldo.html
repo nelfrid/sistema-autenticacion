@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <title>Guardar códigos de respaldo</title>
+  <link rel="stylesheet" href="../../../assets/estilos-base.css">
+  <link rel="stylesheet" href="codigos-respaldo.css">
+  <script type="module" src="codigos-respaldo.js"></script>
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+  <main id="contenido" class="pagina-autenticacion">
+    <div class="contenedor-autenticacion contenedor-codigos">
+      <p class="identidad-servicio">Recuperación de acceso</p>
+      <section class="tarjeta" aria-labelledby="titulo">
+        <h1 id="titulo">Guarda tus códigos de respaldo</h1>
+        <p class="introduccion">Cada código funciona una sola vez. Guárdalos fuera de este dispositivo si es posible y no los compartas.</p>
+        <div id="mensaje-codigos" class="mensaje" role="alert" aria-live="assertive" hidden></div>
+        <div id="estado-carga" role="status">Obteniendo códigos…</div>
+        <ol id="lista-codigos" class="lista-codigos" aria-label="Códigos de respaldo" hidden></ol>
+        <form id="formulario-confirmacion" hidden>
+          <label class="casilla" for="codigos_guardados">
+            <input id="codigos_guardados" name="codigos_guardados" type="checkbox" required>
+            <span>Confirmo que guardé estos códigos en un lugar seguro.</span>
+          </label>
+          <p id="error-codigos_guardados" class="error-campo"></p>
+          <button class="boton boton-principal" type="submit">Confirmar y continuar</button>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

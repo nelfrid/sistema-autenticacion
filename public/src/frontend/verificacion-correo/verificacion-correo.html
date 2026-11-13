@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <title>Verificar correo</title>
+  <link rel="stylesheet" href="../../../assets/estilos-base.css">
+  <link rel="stylesheet" href="verificacion-correo.css">
+  <script type="module" src="verificacion-correo.js"></script>
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+  <main id="contenido" class="pagina-autenticacion">
+    <div class="contenedor-autenticacion">
+      <p class="identidad-servicio">Servicio de autenticación</p>
+      <section class="tarjeta" aria-labelledby="titulo">
+        <h1 id="titulo">Verificar correo</h1>
+        <p class="introduccion">El enlace es de un solo uso y vence 30 minutos después de su emisión.</p>
+        <div id="estado-verificacion" class="mensaje mensaje-aviso" role="status" aria-live="polite">Abre el enlace recibido para verificar tu cuenta.</div>
+
+        <section id="seccion-reenvio" aria-labelledby="titulo-reenvio">
+          <h2 id="titulo-reenvio">Solicitar otro enlace</h2>
+          <p>La respuesta será la misma exista o no una cuenta asociada.</p>
+          <form id="formulario-reenvio" novalidate>
+            <div class="grupo-campo">
+              <label for="correo">Correo electrónico</label>
+              <input id="correo" name="correo" type="email" inputmode="email" autocomplete="email" maxlength="254" aria-describedby="error-correo" required>
+              <p id="error-correo" class="error-campo"></p>
+            </div>
+            <button class="boton" type="submit">Solicitar enlace</button>
+          </form>
+        </section>
+
+        <p class="pie-formulario"><a href="../inicio-sesion/inicio-sesion.html">Volver al inicio de sesión</a></p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
